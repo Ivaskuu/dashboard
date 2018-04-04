@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sparkline/flutter_sparkline.dart';
 
+import 'shop_items_page.dart';
+
 class MainPage extends StatefulWidget
 {
   @override
@@ -264,7 +266,7 @@ class _MainPageState extends State<MainPage>
               shadowColor: new Color(0x802196F3),
               child: new InkWell
               (
-                onTap: () {},
+                onTap: () => Navigator.of(context).push(new MaterialPageRoute(builder: (_) => new ShopItemsPage())),
                 child: new Padding
                 (
                   padding: const EdgeInsets.all(24.0),

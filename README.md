@@ -1,8 +1,5 @@
-# dashboard
+# Dashboard concept
+A dashboard concept app inspired by [this](https://www.uplabs.com/posts/dashboard-components-made-with-invision-studio).
 
-A new Flutter project.
-
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+## Screenshot
+![screenshot](media/screenshot.png)

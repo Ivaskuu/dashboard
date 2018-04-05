@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'item_reviews_page.dart';
 
 class ShopItemsPage extends StatefulWidget
 {
@@ -121,66 +122,70 @@ class ShopItem extends StatelessWidget
                       borderRadius: new BorderRadius.circular(12.0),
                       shadowColor: new Color(0x802196F3),
                       color: Colors.white,
-                      child: new Padding
+                      child: new InkWell
                       (
-                        padding: new EdgeInsets.all(24.0),
-                        child: new Column
+                        onTap: () => Navigator.of(context).push(new MaterialPageRoute(builder: (_) => new ItemReviewsPage())),
+                        child: new Padding
                         (
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>
-                          [
-                            /// Title and rating
-                            new Column
-                            (
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>
-                              [
-                                new Text('Nike Jordan III', style: new TextStyle(color: Colors.blueAccent)),
-                                new Row
-                                (
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: <Widget>
-                                  [
-                                    new Text('4.6', style: new TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0)),
-                                    new Icon(Icons.star, color: Colors.black, size: 24.0),
-                                  ],
-                                ),
-                              ],
-                            ),
-                            /// Infos
-                            new Row
-                            (
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>
-                              [
-                                new Text('Bought', style: new TextStyle()),
-                                new Padding
-                                (
-                                  padding: new EdgeInsets.symmetric(horizontal: 4.0),
-                                  child: new Text('1,361', style: new TextStyle(fontWeight: FontWeight.w700)),
-                                ),
-                                new Text('times for a profit of', style: new TextStyle()),
-                                new Padding
-                                (
-                                  padding: new EdgeInsets.symmetric(horizontal: 4.0),
-                                  child: new Material
+                          padding: new EdgeInsets.all(24.0),
+                          child: new Column
+                          (
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>
+                            [
+                              /// Title and rating
+                              new Column
+                              (
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>
+                                [
+                                  new Text('Nike Jordan III', style: new TextStyle(color: Colors.blueAccent)),
+                                  new Row
                                   (
-                                    borderRadius: new BorderRadius.circular(8.0),
-                                    color: Colors.green,
-                                    child: new Padding
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: <Widget>
+                                    [
+                                      new Text('4.6', style: new TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0)),
+                                      new Icon(Icons.star, color: Colors.black, size: 24.0),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              /// Infos
+                              new Row
+                              (
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>
+                                [
+                                  new Text('Bought', style: new TextStyle()),
+                                  new Padding
+                                  (
+                                    padding: new EdgeInsets.symmetric(horizontal: 4.0),
+                                    child: new Text('1,361', style: new TextStyle(fontWeight: FontWeight.w700)),
+                                  ),
+                                  new Text('times for a profit of', style: new TextStyle()),
+                                  new Padding
+                                  (
+                                    padding: new EdgeInsets.symmetric(horizontal: 4.0),
+                                    child: new Material
                                     (
-                                      padding: new EdgeInsets.all(4.0),
-                                      child: new Text('\$ 13K', style: new TextStyle(color: Colors.white)),
+                                      borderRadius: new BorderRadius.circular(8.0),
+                                      color: Colors.green,
+                                      child: new Padding
+                                      (
+                                        padding: new EdgeInsets.all(4.0),
+                                        child: new Text('\$ 13K', style: new TextStyle(color: Colors.white)),
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          ],
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -212,29 +217,41 @@ class ShopItem extends StatelessWidget
           /// Review
           new Padding
           (
-            padding: new EdgeInsets.only(top: 160.0, left: 32.0,),
+            padding: new EdgeInsets.only(top: 160.0, left: 32.0),
             child: new Material
             (
               elevation: 12.0,
-              color: Colors.white,
+              color: Colors.transparent,
               borderRadius: new BorderRadius.only
               (
                 topLeft: new Radius.circular(20.0),
                 bottomLeft: new Radius.circular(20.0),
-                topRight: new Radius.circular(20.0),
+                bottomRight: new Radius.circular(20.0),
               ),
               child: new Container
               (
-                margin: new EdgeInsets.symmetric(vertical: 4.0),
-                child: new ListTile
+                decoration: new BoxDecoration
                 (
-                  leading: new CircleAvatar
+                  gradient: new LinearGradient
                   (
-                    backgroundColor: Colors.purple,
-                    child: new Text('AI'),
+                    colors: [ new Color(0xFF84fab0), new Color(0xFF8fd3f4) ],
+                    end: Alignment.topLeft,
+                    begin: Alignment.bottomRight
+                  )
+                ),
+                child: new Container
+                (
+                  margin: new EdgeInsets.symmetric(vertical: 4.0),
+                  child: new ListTile
+                  (
+                    leading: new CircleAvatar
+                    (
+                      backgroundColor: Colors.purple,
+                      child: new Text('AI'),
+                    ),
+                    title: new Text('Ivascu Adrian ★★★★★', style: new TextStyle()),
+                    subtitle: new Text('The shoes were shipped one day before the shipping date, but this wasn\'t at all a problem :). The shoes are very comfortable and good looking', maxLines: 2, overflow: TextOverflow.ellipsis, style: new TextStyle()),
                   ),
-                  title: new Text('Ivascu Adrian ★★★★★'),
-                  subtitle: new Text('The shoes were shipped one day before the shipping date, but this wasn\'t at all a problem :). The shoes are very comfortable and good looking', maxLines: 2, overflow: TextOverflow.ellipsis),
                 ),
               ),
             ),
@@ -380,16 +397,16 @@ class BadShopItem extends StatelessWidget
           /// Review
           new Padding
           (
-            padding: new EdgeInsets.only(top: 160.0, left: 32.0,),
+            padding: new EdgeInsets.only(top: 160.0, right: 32.0,),
             child: new Material
             (
               elevation: 12.0,
               color: Colors.white,
               borderRadius: new BorderRadius.only
               (
-                topLeft: new Radius.circular(20.0),
-                bottomLeft: new Radius.circular(20.0),
                 topRight: new Radius.circular(20.0),
+                bottomLeft: new Radius.circular(20.0),
+                bottomRight: new Radius.circular(20.0),
               ),
               child: new Container
               (
@@ -465,8 +482,7 @@ class NewShopItem extends StatelessWidget
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>
                               [
-                                new Text('_._', style: new TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0)),
-                                new Icon(Icons.star, color: Colors.black, size: 24.0),
+                                new Text('No reviews', style: new TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0)),
                               ],
                             ),
                           ],

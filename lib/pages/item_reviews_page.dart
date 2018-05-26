@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ItemReviewsPage extends StatefulWidget
 {
   @override
-  _ItemReviewsPageState createState() => new _ItemReviewsPageState();
+  _ItemReviewsPageState createState() => _ItemReviewsPageState();
 }
 
 class _ItemReviewsPageState extends State<ItemReviewsPage>
@@ -11,28 +11,28 @@ class _ItemReviewsPageState extends State<ItemReviewsPage>
   @override
   Widget build(BuildContext context)
   {
-    return new Scaffold
+    return Scaffold
     (
-      body: new CustomScrollView
+      body: CustomScrollView
       (
         slivers: <Widget>
         [
-          new SliverAppBar
+          SliverAppBar
           (
             expandedHeight: 170.0,
             backgroundColor: Colors.red,
-            flexibleSpace: new FlexibleSpaceBar
+            flexibleSpace: FlexibleSpaceBar
             (
-              title: new Text('Nike Jordan Air III'),
-              background: new SizedBox.expand
+              title: Text('Nike Jordan Air III'),
+              background: SizedBox.expand
               (
-                child: new Stack
+                child: Stack
                 (
                   alignment: Alignment.center,
                   children: <Widget>
                   [
-                    new Image.asset('res/shoes1.png'),
-                    new Container(color: Colors.black26)
+                    Image.asset('res/shoes1.png'),
+                    Container(color: Colors.black26)
                   ],
                 ),
               ),
@@ -41,82 +41,82 @@ class _ItemReviewsPageState extends State<ItemReviewsPage>
             forceElevated: true,
             pinned: true,
           ),
-          new SliverList
+          SliverList
           (
-            delegate: new SliverChildListDelegate
+            delegate: SliverChildListDelegate
             (
               <Widget>
               [
                 /// Rating average
-                new Center
+                Center
                 (
-                  child: new Container
+                  child: Container
                   (
-                    margin: new EdgeInsets.only(top: 16.0),
-                    child: new Text
+                    margin: EdgeInsets.only(top: 16.0),
+                    child: Text
                     (
                       '4.6',
-                      style: new TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 64.0)
+                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 64.0)
                     ),
                   ),
                 ),
                 /// Rating stars
-                new Padding
+                Padding
                 (
-                  padding: new EdgeInsets.symmetric(horizontal: 60.0),
-                  child: new Row
+                  padding: EdgeInsets.symmetric(horizontal: 60.0),
+                  child: Row
                   (
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>
                     [
-                      new Icon(Icons.star, color: Colors.amber, size: 48.0),
-                      new Icon(Icons.star, color: Colors.amber, size: 48.0),
-                      new Icon(Icons.star, color: Colors.amber, size: 48.0),
-                      new Icon(Icons.star, color: Colors.amber, size: 48.0),
-                      new Icon(Icons.star, color: Colors.black12, size: 48.0),
+                      Icon(Icons.star, color: Colors.amber, size: 48.0),
+                      Icon(Icons.star, color: Colors.amber, size: 48.0),
+                      Icon(Icons.star, color: Colors.amber, size: 48.0),
+                      Icon(Icons.star, color: Colors.amber, size: 48.0),
+                      Icon(Icons.star, color: Colors.black12, size: 48.0),
                     ],
                   ),
                 ),
                 /// Rating chart lines
-                new Padding
+                Padding
                 (
-                  padding: new EdgeInsets.symmetric(horizontal: 32.0, vertical: 16.0),
-                  child: new Column
+                  padding: EdgeInsets.symmetric(horizontal: 32.0, vertical: 16.0),
+                  child: Column
                   (
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>
                     [
                       /// 5 stars and progress bar
-                      new Padding
+                      Padding
                       (
-                        padding: new EdgeInsets.symmetric(vertical: 4.0),
-                        child: new Row
+                        padding: EdgeInsets.symmetric(vertical: 4.0),
+                        child: Row
                         (
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>
                           [
-                            new Row
+                            Row
                             (
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>
                               [
-                                new Icon(Icons.star, color: Colors.black54, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black54, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black54, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black54, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black54, size: 16.0),
+                                Icon(Icons.star, color: Colors.black54, size: 16.0),
+                                Icon(Icons.star, color: Colors.black54, size: 16.0),
+                                Icon(Icons.star, color: Colors.black54, size: 16.0),
+                                Icon(Icons.star, color: Colors.black54, size: 16.0),
+                                Icon(Icons.star, color: Colors.black54, size: 16.0),
                               ],
                             ),
-                            new Padding(padding: new EdgeInsets.only(right: 24.0)),
-                            new Expanded
+                            Padding(padding: EdgeInsets.only(right: 24.0)),
+                            Expanded
                             (
-                              child: new Theme
+                              child: Theme
                               (
-                                data: new ThemeData(accentColor: Colors.green),
-                                child: new LinearProgressIndicator
+                                data: ThemeData(accentColor: Colors.green),
+                                child: LinearProgressIndicator
                                 (
                                   value: 0.9,
                                   backgroundColor: Colors.black12,
@@ -126,35 +126,35 @@ class _ItemReviewsPageState extends State<ItemReviewsPage>
                           ],
                         ),
                       ),
-                      new Padding
+                      Padding
                       (
-                        padding: new EdgeInsets.symmetric(vertical: 4.0),
-                        child: new Row
+                        padding: EdgeInsets.symmetric(vertical: 4.0),
+                        child: Row
                         (
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>
                           [
-                            new Row
+                            Row
                             (
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>
                               [
-                                new Icon(Icons.star, color: Colors.black54, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black54, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black54, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black54, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black12, size: 16.0),
+                                Icon(Icons.star, color: Colors.black54, size: 16.0),
+                                Icon(Icons.star, color: Colors.black54, size: 16.0),
+                                Icon(Icons.star, color: Colors.black54, size: 16.0),
+                                Icon(Icons.star, color: Colors.black54, size: 16.0),
+                                Icon(Icons.star, color: Colors.black12, size: 16.0),
                               ],
                             ),
-                            new Padding(padding: new EdgeInsets.only(right: 24.0)),
-                            new Expanded
+                            Padding(padding: EdgeInsets.only(right: 24.0)),
+                            Expanded
                             (
-                              child: new Theme
+                              child: Theme
                               (
-                                data: new ThemeData(accentColor: Colors.lightGreen),
-                                child: new LinearProgressIndicator
+                                data: ThemeData(accentColor: Colors.lightGreen),
+                                child: LinearProgressIndicator
                                 (
                                   value: 0.7,
                                   backgroundColor: Colors.black12,
@@ -164,35 +164,35 @@ class _ItemReviewsPageState extends State<ItemReviewsPage>
                           ],
                         ),
                       ),
-                      new Padding
+                      Padding
                       (
-                        padding: new EdgeInsets.symmetric(vertical: 4.0),
-                        child: new Row
+                        padding: EdgeInsets.symmetric(vertical: 4.0),
+                        child: Row
                         (
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>
                           [
-                            new Row
+                            Row
                             (
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>
                               [
-                                new Icon(Icons.star, color: Colors.black54, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black54, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black54, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black12, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black12, size: 16.0),
+                                Icon(Icons.star, color: Colors.black54, size: 16.0),
+                                Icon(Icons.star, color: Colors.black54, size: 16.0),
+                                Icon(Icons.star, color: Colors.black54, size: 16.0),
+                                Icon(Icons.star, color: Colors.black12, size: 16.0),
+                                Icon(Icons.star, color: Colors.black12, size: 16.0),
                               ],
                             ),
-                            new Padding(padding: new EdgeInsets.only(right: 24.0)),
-                            new Expanded
+                            Padding(padding: EdgeInsets.only(right: 24.0)),
+                            Expanded
                             (
-                              child: new Theme
+                              child: Theme
                               (
-                                data: new ThemeData(accentColor: Colors.yellow),
-                                child: new LinearProgressIndicator
+                                data: ThemeData(accentColor: Colors.yellow),
+                                child: LinearProgressIndicator
                                 (
                                   value: 0.25,
                                   backgroundColor: Colors.black12,
@@ -202,35 +202,35 @@ class _ItemReviewsPageState extends State<ItemReviewsPage>
                           ],
                         ),
                       ),
-                      new Padding
+                      Padding
                       (
-                        padding: new EdgeInsets.symmetric(vertical: 4.0),
-                        child: new Row
+                        padding: EdgeInsets.symmetric(vertical: 4.0),
+                        child: Row
                         (
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>
                           [
-                            new Row
+                            Row
                             (
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>
                               [
-                                new Icon(Icons.star, color: Colors.black54, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black54, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black12, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black12, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black12, size: 16.0),
+                                Icon(Icons.star, color: Colors.black54, size: 16.0),
+                                Icon(Icons.star, color: Colors.black54, size: 16.0),
+                                Icon(Icons.star, color: Colors.black12, size: 16.0),
+                                Icon(Icons.star, color: Colors.black12, size: 16.0),
+                                Icon(Icons.star, color: Colors.black12, size: 16.0),
                               ],
                             ),
-                            new Padding(padding: new EdgeInsets.only(right: 24.0)),
-                            new Expanded
+                            Padding(padding: EdgeInsets.only(right: 24.0)),
+                            Expanded
                             (
-                              child: new Theme
+                              child: Theme
                               (
-                                data: new ThemeData(accentColor: Colors.orange),
-                                child: new LinearProgressIndicator
+                                data: ThemeData(accentColor: Colors.orange),
+                                child: LinearProgressIndicator
                                 (
                                   value: 0.07,
                                   backgroundColor: Colors.black12,
@@ -240,35 +240,35 @@ class _ItemReviewsPageState extends State<ItemReviewsPage>
                           ],
                         ),
                       ),
-                      new Padding
+                      Padding
                       (
-                        padding: new EdgeInsets.symmetric(vertical: 4.0),
-                        child: new Row
+                        padding: EdgeInsets.symmetric(vertical: 4.0),
+                        child: Row
                         (
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>
                           [
-                            new Row
+                            Row
                             (
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>
                               [
-                                new Icon(Icons.star, color: Colors.black54, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black12, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black12, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black12, size: 16.0),
-                                new Icon(Icons.star, color: Colors.black12, size: 16.0),
+                                Icon(Icons.star, color: Colors.black54, size: 16.0),
+                                Icon(Icons.star, color: Colors.black12, size: 16.0),
+                                Icon(Icons.star, color: Colors.black12, size: 16.0),
+                                Icon(Icons.star, color: Colors.black12, size: 16.0),
+                                Icon(Icons.star, color: Colors.black12, size: 16.0),
                               ],
                             ),
-                            new Padding(padding: new EdgeInsets.only(right: 24.0)),
-                            new Expanded
+                            Padding(padding: EdgeInsets.only(right: 24.0)),
+                            Expanded
                             (
-                              child: new Theme
+                              child: Theme
                               (
-                                data: new ThemeData(accentColor: Colors.red),
-                                child: new LinearProgressIndicator
+                                data: ThemeData(accentColor: Colors.red),
+                                child: LinearProgressIndicator
                                 (
                                   value: 0.12,
                                   backgroundColor: Colors.black12,
@@ -281,113 +281,113 @@ class _ItemReviewsPageState extends State<ItemReviewsPage>
                     ],
                   ),
                 ),
-                new Divider(),
+                Divider(),
                 /// Review
-                new Padding
+                Padding
                 (
-                  padding: new EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
-                  child: new Material
+                  padding: EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
+                  child: Material
                   (
                     elevation: 12.0,
                     color: Colors.white,
-                    borderRadius: new BorderRadius.only
+                    borderRadius: BorderRadius.only
                     (
-                      topRight: new Radius.circular(20.0),
-                      bottomLeft: new Radius.circular(20.0),
-                      bottomRight: new Radius.circular(20.0),
+                      topRight: Radius.circular(20.0),
+                      bottomLeft: Radius.circular(20.0),
+                      bottomRight: Radius.circular(20.0),
                     ),
-                    child: new Container
+                    child: Container
                     (
-                      margin: new EdgeInsets.symmetric(vertical: 10.0, horizontal: 0.0),
-                      child: new Container
+                      margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 0.0),
+                      child: Container
                       (
-                        child: new ListTile
+                        child: ListTile
                         (
-                          leading: new CircleAvatar
+                          leading: CircleAvatar
                           (
                             backgroundColor: Colors.purple,
-                            child: new Text('AI'),
+                            child: Text('AI'),
                           ),
-                          title: new Text('Ivascu Adrian ★★★★★', style: new TextStyle()),
-                          subtitle: new Text('The shoes were shipped one day before the shipping date, but this wasn\'t at all a problem :). The shoes are very comfortable and good looking.', style: new TextStyle()),
+                          title: Text('Ivascu Adrian ★★★★★', style: TextStyle()),
+                          subtitle: Text('The shoes were shipped one day before the shipping date, but this wasn\'t at all a problem :). The shoes are very comfortable and good looking.', style: TextStyle()),
                         ),
                       ),
                     ),
                   ),
                 ),
                 /// Review reply
-                new Padding
+                Padding
                 (
-                  padding: new EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
-                  child: new Row
+                  padding: EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
+                  child: Row
                   (
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
-                      new Material
+                      Material
                       (
                         elevation: 12.0,
                         color: Colors.tealAccent,
-                        borderRadius: new BorderRadius.only
+                        borderRadius: BorderRadius.only
                         (
-                          topLeft: new Radius.circular(20.0),
-                          bottomLeft: new Radius.circular(20.0),
-                          bottomRight: new Radius.circular(20.0),
+                          topLeft: Radius.circular(20.0),
+                          bottomLeft: Radius.circular(20.0),
+                          bottomRight: Radius.circular(20.0),
                         ),
-                        child: new Container
+                        child: Container
                         (
-                          margin: new EdgeInsets.symmetric(vertical: 10.0, horizontal: 16.0),
-                          child: new Text('Happy to hear that!', style: Theme.of(context).textTheme.subhead),
+                          margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 16.0),
+                          child: Text('Happy to hear that!', style: Theme.of(context).textTheme.subhead),
                         ),
                       ),
                     ],
                   ),
                 ),
-                new Divider(),
+                Divider(),
                 /// Review
-                new Padding
+                Padding
                 (
-                  padding: new EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
-                  child: new Material
+                  padding: EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
+                  child: Material
                   (
                     elevation: 12.0,
                     color: Colors.white,
-                    borderRadius: new BorderRadius.only
+                    borderRadius: BorderRadius.only
                     (
-                      topRight: new Radius.circular(20.0),
-                      bottomLeft: new Radius.circular(20.0),
-                      bottomRight: new Radius.circular(20.0),
+                      topRight: Radius.circular(20.0),
+                      bottomLeft: Radius.circular(20.0),
+                      bottomRight: Radius.circular(20.0),
                     ),
-                    child: new Container
+                    child: Container
                     (
-                      margin: new EdgeInsets.symmetric(vertical: 10.0, horizontal: 0.0),
-                      child: new Column
+                      margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 0.0),
+                      child: Column
                       (
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: <Widget>
                         [
-                          new Container
+                          Container
                           (
-                            child: new ListTile
+                            child: ListTile
                             (
-                              leading: new CircleAvatar
+                              leading: CircleAvatar
                               (
                                 backgroundColor: Colors.purple,
-                                child: new Text('AI'),
+                                child: Text('AI'),
                               ),
-                              title: new Text('Ivascu Adrian ★★★★★', style: new TextStyle()),
-                              subtitle: new Text('The shoes were shipped one day before the shipping date, but this wasn\'t at all a problem :). The shoes are very comfortable and good looking', style: new TextStyle()),
+                              title: Text('Ivascu Adrian ★★★★★', style: TextStyle()),
+                              subtitle: Text('The shoes were shipped one day before the shipping date, but this wasn\'t at all a problem :). The shoes are very comfortable and good looking', style: TextStyle()),
                             ),
                           ),
-                          new Padding
+                          Padding
                           (
-                            padding: new EdgeInsets.only(top: 4.0, right: 10.0),
-                            child: new FlatButton.icon
+                            padding: EdgeInsets.only(top: 4.0, right: 10.0),
+                            child: FlatButton.icon
                             (
                               onPressed: () {},
-                              icon: new Icon(Icons.reply, color: Colors.blueAccent),
-                              label: new Text('Reply', style: new TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.w700, fontSize: 16.0))
+                              icon: Icon(Icons.reply, color: Colors.blueAccent),
+                              label: Text('Reply', style: TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.w700, fontSize: 16.0))
                             ),
                           )
                         ],
@@ -395,51 +395,51 @@ class _ItemReviewsPageState extends State<ItemReviewsPage>
                     ),
                   ),
                 ),
-                new Divider(),
+                Divider(),
                 /// Review
-                new Padding
+                Padding
                 (
-                  padding: new EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
-                  child: new Material
+                  padding: EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
+                  child: Material
                   (
                     elevation: 12.0,
                     color: Colors.white,
-                    borderRadius: new BorderRadius.only
+                    borderRadius: BorderRadius.only
                     (
-                      topRight: new Radius.circular(20.0),
-                      bottomLeft: new Radius.circular(20.0),
-                      bottomRight: new Radius.circular(20.0),
+                      topRight: Radius.circular(20.0),
+                      bottomLeft: Radius.circular(20.0),
+                      bottomRight: Radius.circular(20.0),
                     ),
-                    child: new Container
+                    child: Container
                     (
-                      margin: new EdgeInsets.symmetric(vertical: 10.0, horizontal: 0.0),
-                      child: new Column
+                      margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 0.0),
+                      child: Column
                       (
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: <Widget>
                         [
-                          new Container
+                          Container
                           (
-                            child: new ListTile
+                            child: ListTile
                             (
-                              leading: new CircleAvatar
+                              leading: CircleAvatar
                               (
                                 backgroundColor: Colors.purple,
-                                child: new Text('AI'),
+                                child: Text('AI'),
                               ),
-                              title: new Text('Ivascu Adrian ★★★★★', style: new TextStyle()),
-                              subtitle: new Text('The shoes were shipped one day before the shipping date, but this wasn\'t at all a problem :). The shoes are very comfortable and good looking', style: new TextStyle()),
+                              title: Text('Ivascu Adrian ★★★★★', style: TextStyle()),
+                              subtitle: Text('The shoes were shipped one day before the shipping date, but this wasn\'t at all a problem :). The shoes are very comfortable and good looking', style: TextStyle()),
                             ),
                           ),
-                          new Padding
+                          Padding
                           (
-                            padding: new EdgeInsets.only(top: 4.0, right: 10.0),
-                            child: new FlatButton.icon
+                            padding: EdgeInsets.only(top: 4.0, right: 10.0),
+                            child: FlatButton.icon
                             (
                               onPressed: () {},
-                              icon: new Icon(Icons.reply, color: Colors.blueAccent),
-                              label: new Text('Reply', style: new TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.w700, fontSize: 16.0))
+                              icon: Icon(Icons.reply, color: Colors.blueAccent),
+                              label: Text('Reply', style: TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.w700, fontSize: 16.0))
                             ),
                           )
                         ],

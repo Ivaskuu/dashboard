@@ -6,7 +6,7 @@ import 'shop_items_page.dart';
 class MainPage extends StatefulWidget
 {
   @override
-  _MainPageState createState() => new _MainPageState();
+  _MainPageState createState() => _MainPageState();
 }
 
 class _MainPageState extends State<MainPage>
@@ -25,78 +25,78 @@ class _MainPageState extends State<MainPage>
   @override
   Widget build(BuildContext context)
   {
-    return new Scaffold
+    return Scaffold
     (
-      appBar: new AppBar
+      appBar: AppBar
       (
         elevation: 2.0,
         backgroundColor: Colors.white,
-        title: new Text('Dashboard', style: new TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 30.0)),
+        title: Text('Dashboard', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 30.0)),
         actions: <Widget>
         [
-          new Container
+          Container
           (
-            margin: new EdgeInsets.only(right: 8.0),
-            child: new Row
+            margin: EdgeInsets.only(right: 8.0),
+            child: Row
             (
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>
               [
-                new Text('beclothed.com', style: new TextStyle(color: Colors.blue, fontWeight: FontWeight.w700, fontSize: 14.0)),
-                new Icon(Icons.arrow_drop_down, color: Colors.black54)
+                Text('beclothed.com', style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w700, fontSize: 14.0)),
+                Icon(Icons.arrow_drop_down, color: Colors.black54)
               ],
             ),
           )
         ],
       ),
-      body: new ListView
+      body: ListView
       (
         scrollDirection: Axis.vertical,
-        padding: new EdgeInsets.symmetric(horizontal: 16.0),
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
         children: <Widget>
         [
-          new Padding(padding: new EdgeInsets.only(top: 16.0)),
-          new Container
+          Padding(padding: EdgeInsets.only(top: 16.0)),
+          Container
           (
-            margin: new EdgeInsets.only(bottom: 16.0),
-            child: new Material
+            margin: EdgeInsets.only(bottom: 16.0),
+            child: Material
             (
               elevation: 14.0,
-              borderRadius: new BorderRadius.circular(12.0),
-              shadowColor: new Color(0x802196F3),
-              child: new InkWell
+              borderRadius: BorderRadius.circular(12.0),
+              shadowColor: Color(0x802196F3),
+              child: InkWell
               (
                 onTap: () {},
-                child: new Padding
+                child: Padding
                 (
                   padding: const EdgeInsets.all(24.0),
-                  child: new Row
+                  child: Row
                   (
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>
                     [
-                      new Column
+                      Column
                       (
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>
                         [
-                          new Text('Total Views', style: new TextStyle(color: Colors.blueAccent)),
-                          new Text('265K', style: new TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0))
+                          Text('Total Views', style: TextStyle(color: Colors.blueAccent)),
+                          Text('265K', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0))
                         ],
                       ),
-                      new Material
+                      Material
                       (
                         color: Colors.blue,
-                        borderRadius: new BorderRadius.circular(24.0),
-                        child: new Center
+                        borderRadius: BorderRadius.circular(24.0),
+                        child: Center
                         (
-                          child: new Padding
+                          child: Padding
                           (
                             padding: const EdgeInsets.all(16.0),
-                            child: new Icon(Icons.timeline, color: Colors.white, size: 30.0),
+                            child: Icon(Icons.timeline, color: Colors.white, size: 30.0),
                           )
                         )
                       )
@@ -106,79 +106,79 @@ class _MainPageState extends State<MainPage>
               )
             )
           ),
-          new Container
+          Container
           (
-            margin: new EdgeInsets.only(bottom: 16.0),
-            child: new Row
+            margin: EdgeInsets.only(bottom: 16.0),
+            child: Row
             (
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>
               [
-                new Material
+                Material
                 (
                   elevation: 14.0,
-                  borderRadius: new BorderRadius.circular(12.0),
-                  shadowColor: new Color(0x802196F3),
-                  child: new InkWell
+                  borderRadius: BorderRadius.circular(12.0),
+                  shadowColor: Color(0x802196F3),
+                  child: InkWell
                   (
                     onTap: () {},
-                    child: new Padding
+                    child: Padding
                     (
                       padding: const EdgeInsets.all(24.0),
-                      child: new Column
+                      child: Column
                       (
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>
                         [
-                          new Material
+                          Material
                           (
                             color: Colors.teal,
-                            shape: new CircleBorder(),
-                            child: new Padding
+                            shape: CircleBorder(),
+                            child: Padding
                             (
                               padding: const EdgeInsets.all(16.0),
-                              child: new Icon(Icons.settings_applications, color: Colors.white, size: 30.0),
+                              child: Icon(Icons.settings_applications, color: Colors.white, size: 30.0),
                             )
                           ),
-                          new Padding(padding: new EdgeInsets.only(bottom: 16.0)),
-                          new Text('General', style: new TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 24.0)),
-                          new Text('Images, Videos', style: new TextStyle(color: Colors.black45)),
+                          Padding(padding: EdgeInsets.only(bottom: 16.0)),
+                          Text('General', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 24.0)),
+                          Text('Images, Videos', style: TextStyle(color: Colors.black45)),
                         ]
                       ),
                     ),
                   )
                 ),
-                new Material
+                Material
                 (
                   elevation: 14.0,
-                  borderRadius: new BorderRadius.circular(12.0),
-                  shadowColor: new Color(0x802196F3),
-                  child: new InkWell
+                  borderRadius: BorderRadius.circular(12.0),
+                  shadowColor: Color(0x802196F3),
+                  child: InkWell
                   (
                     onTap: () {},
-                    child: new Padding
+                    child: Padding
                     (
                       padding: const EdgeInsets.all(24.0),
-                      child: new Column
+                      child: Column
                       (
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>
                         [
-                          new Material
+                          Material
                           (
                             color: Colors.amber,
-                            shape: new CircleBorder(),
-                            child: new Padding
+                            shape: CircleBorder(),
+                            child: Padding
                             (
                               padding: const EdgeInsets.all(16.0),
-                              child: new Icon(Icons.notifications, color: Colors.white, size: 30.0),
+                              child: Icon(Icons.notifications, color: Colors.white, size: 30.0),
                             )
                           ),
-                          new Padding(padding: new EdgeInsets.only(bottom: 16.0)),
-                          new Text('Notification', style: new TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 24.0)),
-                          new Text('All ', style: new TextStyle(color: Colors.black45)),
+                          Padding(padding: EdgeInsets.only(bottom: 16.0)),
+                          Text('Notification', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 24.0)),
+                          Text('All ', style: TextStyle(color: Colors.black45)),
                         ]
                       ),
                     ),
@@ -187,43 +187,43 @@ class _MainPageState extends State<MainPage>
               ],
             )
           ),
-          new Container
+          Container
           (
-            margin: new EdgeInsets.only(bottom: 16.0),
-            child: new Material
+            margin: EdgeInsets.only(bottom: 16.0),
+            child: Material
             (
               elevation: 14.0,
-              borderRadius: new BorderRadius.circular(12.0),
-              shadowColor: new Color(0x802196F3),
-              child: new InkWell
+              borderRadius: BorderRadius.circular(12.0),
+              shadowColor: Color(0x802196F3),
+              child: InkWell
               (
                 onTap: () {},
-                child: new Padding
+                child: Padding
                 (
                   padding: const EdgeInsets.all(24.0),
-                  child: new Column
+                  child: Column
                   (
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>
                     [
-                      new Row
+                      Row
                       (
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>
                         [
-                          new Column
+                          Column
                           (
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>
                             [
-                              new Text('Revenue', style: new TextStyle(color: Colors.green)),
-                              new Text('\$16K', style: new TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0)),
+                              Text('Revenue', style: TextStyle(color: Colors.green)),
+                              Text('\$16K', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0)),
                             ],
                           ),
-                          new DropdownButton
+                          DropdownButton
                           (
                             isDense: true,
                             value: actualDropdown,
@@ -234,17 +234,17 @@ class _MainPageState extends State<MainPage>
                             }),
                             items: chartDropdownItems.map((String title)
                             {
-                              return new DropdownMenuItem
+                              return DropdownMenuItem
                               (
                                 value: title,
-                                child: new Text(title, style: new TextStyle(color: Colors.blue, fontWeight: FontWeight.w400, fontSize: 14.0)),
+                                child: Text(title, style: TextStyle(color: Colors.blue, fontWeight: FontWeight.w400, fontSize: 14.0)),
                               );
                             }).toList()
                           )
                         ],
                       ),
-                      new Padding(padding: new EdgeInsets.only(bottom: 4.0)),
-                      new Sparkline
+                      Padding(padding: EdgeInsets.only(bottom: 4.0)),
+                      Sparkline
                       (
                         data: charts[actualChart],
                         lineWidth: 5.0,
@@ -256,46 +256,46 @@ class _MainPageState extends State<MainPage>
               )
             )
           ),
-          new Container
+          Container
           (
-            margin: new EdgeInsets.only(bottom: 16.0),
-            child: new Material
+            margin: EdgeInsets.only(bottom: 16.0),
+            child: Material
             (
               elevation: 14.0,
-              borderRadius: new BorderRadius.circular(12.0),
-              shadowColor: new Color(0x802196F3),
-              child: new InkWell
+              borderRadius: BorderRadius.circular(12.0),
+              shadowColor: Color(0x802196F3),
+              child: InkWell
               (
-                onTap: () => Navigator.of(context).push(new MaterialPageRoute(builder: (_) => new ShopItemsPage())),
-                child: new Padding
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => ShopItemsPage())),
+                child: Padding
                 (
                   padding: const EdgeInsets.all(24.0),
-                  child: new Row
+                  child: Row
                   (
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>
                     [
-                      new Column
+                      Column
                       (
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>
                         [
-                          new Text('Shop Items', style: new TextStyle(color: Colors.redAccent)),
-                          new Text('173', style: new TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0))
+                          Text('Shop Items', style: TextStyle(color: Colors.redAccent)),
+                          Text('173', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0))
                         ],
                       ),
-                      new Material
+                      Material
                       (
                         color: Colors.red,
-                        borderRadius: new BorderRadius.circular(24.0),
-                        child: new Center
+                        borderRadius: BorderRadius.circular(24.0),
+                        child: Center
                         (
-                          child: new Padding
+                          child: Padding
                           (
-                            padding: new EdgeInsets.all(16.0),
-                            child: new Icon(Icons.store, color: Colors.white, size: 30.0),
+                            padding: EdgeInsets.all(16.0),
+                            child: Icon(Icons.store, color: Colors.white, size: 30.0),
                           )
                         )
                       )

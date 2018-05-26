@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sparkline/flutter_sparkline.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 import 'shop_items_page.dart';
 
@@ -50,155 +51,104 @@ class _MainPageState extends State<MainPage>
           )
         ],
       ),
-      body: ListView
-      (
-        scrollDirection: Axis.vertical,
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
-        children: <Widget>
-        [
-          Padding(padding: EdgeInsets.only(top: 16.0)),
-          Container
-          (
-            margin: EdgeInsets.only(bottom: 16.0),
-            child: Material
+      body: StaggeredGridView.count(
+        crossAxisCount: 2,
+        crossAxisSpacing: 12.0,
+        mainAxisSpacing: 12.0,
+        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+        children: <Widget>[
+          _buildTile(
+            Padding
             (
-              elevation: 14.0,
-              borderRadius: BorderRadius.circular(12.0),
-              shadowColor: Color(0x802196F3),
-              child: InkWell
+              padding: const EdgeInsets.all(24.0),
+              child: Row
               (
-                onTap: () {},
-                child: Padding
-                (
-                  padding: const EdgeInsets.all(24.0),
-                  child: Row
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>
+                [
+                  Column
                   (
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>
                     [
-                      Column
-                      (
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>
-                        [
-                          Text('Total Views', style: TextStyle(color: Colors.blueAccent)),
-                          Text('265K', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0))
-                        ],
-                      ),
-                      Material
-                      (
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(24.0),
-                        child: Center
-                        (
-                          child: Padding
-                          (
-                            padding: const EdgeInsets.all(16.0),
-                            child: Icon(Icons.timeline, color: Colors.white, size: 30.0),
-                          )
-                        )
-                      )
-                    ]
+                      Text('Total Views', style: TextStyle(color: Colors.blueAccent)),
+                      Text('265K', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0))
+                    ],
                   ),
-                ),
-              )
-            )
-          ),
-          Container
-          (
-            margin: EdgeInsets.only(bottom: 16.0),
-            child: Row
-            (
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>
-              [
-                Material
-                (
-                  elevation: 14.0,
-                  borderRadius: BorderRadius.circular(12.0),
-                  shadowColor: Color(0x802196F3),
-                  child: InkWell
+                  Material
                   (
-                    onTap: () {},
-                    child: Padding
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(24.0),
+                    child: Center
                     (
-                      padding: const EdgeInsets.all(24.0),
-                      child: Column
+                      child: Padding
                       (
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>
-                        [
-                          Material
-                          (
-                            color: Colors.teal,
-                            shape: CircleBorder(),
-                            child: Padding
-                            (
-                              padding: const EdgeInsets.all(16.0),
-                              child: Icon(Icons.settings_applications, color: Colors.white, size: 30.0),
-                            )
-                          ),
-                          Padding(padding: EdgeInsets.only(bottom: 16.0)),
-                          Text('General', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 24.0)),
-                          Text('Images, Videos', style: TextStyle(color: Colors.black45)),
-                        ]
-                      ),
-                    ),
+                        padding: const EdgeInsets.all(16.0),
+                        child: Icon(Icons.timeline, color: Colors.white, size: 30.0),
+                      )
+                    )
                   )
-                ),
-                Material
-                (
-                  elevation: 14.0,
-                  borderRadius: BorderRadius.circular(12.0),
-                  shadowColor: Color(0x802196F3),
-                  child: InkWell
-                  (
-                    onTap: () {},
-                    child: Padding
-                    (
-                      padding: const EdgeInsets.all(24.0),
-                      child: Column
-                      (
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>
-                        [
-                          Material
-                          (
-                            color: Colors.amber,
-                            shape: CircleBorder(),
-                            child: Padding
-                            (
-                              padding: const EdgeInsets.all(16.0),
-                              child: Icon(Icons.notifications, color: Colors.white, size: 30.0),
-                            )
-                          ),
-                          Padding(padding: EdgeInsets.only(bottom: 16.0)),
-                          Text('Notification', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 24.0)),
-                          Text('All ', style: TextStyle(color: Colors.black45)),
-                        ]
-                      ),
-                    ),
-                  )
-                ),
-              ],
-            )
+                ]
+              ),
+            ),
           ),
-          Container
-          (
-            margin: EdgeInsets.only(bottom: 16.0),
-            child: Material
-            (
-              elevation: 14.0,
-              borderRadius: BorderRadius.circular(12.0),
-              shadowColor: Color(0x802196F3),
-              child: InkWell
+          _buildTile(
+            Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: Column
               (
-                onTap: () {},
-                child: Padding
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>
+                [
+                  Material
+                  (
+                    color: Colors.teal,
+                    shape: CircleBorder(),
+                    child: Padding
+                    (
+                      padding: const EdgeInsets.all(16.0),
+                      child: Icon(Icons.settings_applications, color: Colors.white, size: 30.0),
+                    )
+                  ),
+                  Padding(padding: EdgeInsets.only(bottom: 16.0)),
+                  Text('General', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 24.0)),
+                  Text('Images, Videos', style: TextStyle(color: Colors.black45)),
+                ]
+              ),
+            ),
+          ),
+          _buildTile(
+            Padding
+            (
+              padding: const EdgeInsets.all(24.0),
+              child: Column
+              (
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>
+                [
+                  Material
+                  (
+                    color: Colors.amber,
+                    shape: CircleBorder(),
+                    child: Padding
+                    (
+                      padding: EdgeInsets.all(16.0),
+                      child: Icon(Icons.notifications, color: Colors.white, size: 30.0),
+                    )
+                  ),
+                  Padding(padding: EdgeInsets.only(bottom: 16.0)),
+                  Text('Alerts', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 24.0)),
+                  Text('All ', style: TextStyle(color: Colors.black45)),
+                ]
+              ),
+            ),
+          ),
+          _buildTile(
+            Padding
                 (
                   padding: const EdgeInsets.all(24.0),
                   child: Column
@@ -253,59 +203,67 @@ class _MainPageState extends State<MainPage>
                     ],
                   )
                 ),
-              )
-            )
           ),
-          Container
-          (
-            margin: EdgeInsets.only(bottom: 16.0),
-            child: Material
+          _buildTile(
+            Padding
             (
-              elevation: 14.0,
-              borderRadius: BorderRadius.circular(12.0),
-              shadowColor: Color(0x802196F3),
-              child: InkWell
+              padding: const EdgeInsets.all(24.0),
+              child: Row
               (
-                onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => ShopItemsPage())),
-                child: Padding
-                (
-                  padding: const EdgeInsets.all(24.0),
-                  child: Row
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>
+                [
+                  Column
                   (
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>
                     [
-                      Column
-                      (
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>
-                        [
-                          Text('Shop Items', style: TextStyle(color: Colors.redAccent)),
-                          Text('173', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0))
-                        ],
-                      ),
-                      Material
-                      (
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(24.0),
-                        child: Center
-                        (
-                          child: Padding
-                          (
-                            padding: EdgeInsets.all(16.0),
-                            child: Icon(Icons.store, color: Colors.white, size: 30.0),
-                          )
-                        )
-                      )
-                    ]
+                      Text('Shop Items', style: TextStyle(color: Colors.redAccent)),
+                      Text('173', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 34.0))
+                    ],
                   ),
-                ),
-              )
-            )
-          ),
+                  Material
+                  (
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(24.0),
+                    child: Center
+                    (
+                      child: Padding
+                      (
+                        padding: EdgeInsets.all(16.0),
+                        child: Icon(Icons.store, color: Colors.white, size: 30.0),
+                      )
+                    )
+                  )
+                ]
+              ),
+            ),
+            onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => ShopItemsPage())),
+          )
         ],
+        staggeredTiles: [
+          StaggeredTile.extent(2, 110.0),
+          StaggeredTile.extent(1, 180.0),
+          StaggeredTile.extent(1, 180.0),
+          StaggeredTile.extent(2, 220.0),
+          StaggeredTile.extent(2, 110.0),
+        ],
+      )
+    );
+  }
+
+  Widget _buildTile(Widget child, {Function() onTap}) {
+    return Material(
+      elevation: 14.0,
+      borderRadius: BorderRadius.circular(12.0),
+      shadowColor: Color(0x802196F3),
+      child: InkWell
+      (
+        // Do onTap() if it isn't null, otherwise do print()
+        onTap: onTap != null ? () => onTap() : () { print('Not set yet'); },
+        child: child
       )
     );
   }
